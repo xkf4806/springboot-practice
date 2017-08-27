@@ -57,26 +57,30 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
+		<!--便于统一管理版本号-->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
 			<version>1.11.3</version>
 		</dependency>
-		<!--便于统一管理版本号-->
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator</artifactId>
 		</dependency>
+	
 		<!--<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper</artifactId>
 			<version>5.0.0</version>
 		</dependency>-->
+		<!-- 该依赖自动加入pageHelper -->
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>1.1.0</version>
 		</dependency>
+		
 		<!--监控系统运行情况-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
