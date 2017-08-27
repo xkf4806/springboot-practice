@@ -1,3 +1,4 @@
-window.onload = function () {
-    console.log("hello,world!!")
-}
+$(function () {
+    var html = $("p").html();
+    console.log('hello:' + html)
+})

@@ -18,8 +18,8 @@ public class IndexController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     @GetMapping(value = "/toHello")
     public String index(ModelMap map) {
-        logger.error("你好==================》");
-        map.addAttribute("name","thymeleaf");
+        logger.debug("你好==================》");
+        map.addAttribute("name","Michael Jordan!!");
         return "hello";
     }
 }

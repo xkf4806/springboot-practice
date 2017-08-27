@@ -17,9 +17,9 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class UserMapperTest {
 
-
     @Autowired
     private UserMapper userMapper;
+
     @Test
     public void deleteByPrimaryKey() throws Exception {
         UserExample userExample = new UserExample();
@@ -48,7 +48,7 @@ public class UserMapperTest {
 
     @Test
     public void selectByPage() {
-        PageHelper.startPage(2, 5);
+        PageHelper.startPage(2, 5); // 使用pageHelper插件，分页功能如此简单
         UserExample example = new UserExample();
         List<User> users = userMapper.selectByExample(example);
         for (User user : users) {
