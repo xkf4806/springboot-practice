@@ -11,7 +11,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * Created by 1 on 2017-08-15.
+ * @ClassName SwaggerConfig
+ * @description swagger配置
+ * @date on 2017/08/30 15:09:16
  */
 @Configuration
 @EnableSwagger2
@@ -19,7 +21,7 @@ public class SwaggerConfig {
 
     @Bean
     public Docket createRestApi() {
-        return new Docket(DocumentationType.SWAGGER_2).enable(true).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.basePackage("com.springboot.demo01.controller"))
+        return new Docket(DocumentationType.SWAGGER_2).enable(true).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.basePackage("com.springboot.demo01"))
                 .paths(PathSelectors.any()).build();
     }
 
