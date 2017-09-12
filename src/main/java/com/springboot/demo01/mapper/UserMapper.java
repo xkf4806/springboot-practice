@@ -3,6 +3,8 @@ package com.springboot.demo01.mapper;
 import com.springboot.demo01.entity.User;
 import com.springboot.demo01.entity.UserExample;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
@@ -55,4 +57,8 @@ public interface UserMapper {
         "where id = #{id,jdbcType=BIGINT}"
     })
     int updateByPrimaryKey(User record);
+
+    List<User> findUserByCondition(Map param);
+
+    Integer countUserByCondition(Map param);
 }

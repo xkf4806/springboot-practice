@@ -15,11 +15,18 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
 
+
+
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     @GetMapping(value = "/toHello")
     public String index(ModelMap map) {
         logger.debug("你好==================》");
         map.addAttribute("name","Michael Jordan!!");
         return "hello";
+    }
+
+    public String getUserByPage() {
+
+        return "";
     }
 }

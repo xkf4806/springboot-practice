@@ -156,4 +156,28 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="findUserByCondition" parameterType="java.util.Map" resultMap="BaseResultMap">
+    select * from user
+    <where>
+      <if test="name != null and name != ''">
+        name like concat(concat('%',#{name}),'%')
+      </if>
+      <if test="age != null and age != ''">
+        AND age &gt; #{age}
+      </if>
+    </where>
+    order by age asc
+  </select>
+  <select id="countUserByCondition" parameterType="java.util.Map" resultType="java.lang.Integer">
+    select count(0) from user
+    <where>
+      <if test="name != null and name != ''">
+        name like concat(concat('%',#{name}),'%')
+      </if>
+      <if test="age != null and age != ''">
+        AND age &gt; #{age}
+      </if>
+    </where>
+    order by age asc
+  </select>
 </mapper>
