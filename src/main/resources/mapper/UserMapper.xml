@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.springboot.demo01.mapper.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.springboot.demo01.entity.User" >
+<mapper namespace="com.springboot.tutorial.demo01.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.springboot.tutorial.demo01.entity.User" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="age" property="age" jdbcType="INTEGER" />
@@ -67,7 +67,7 @@
   <sql id="Base_Column_List" >
     id, name, age
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.springboot.demo01.entity.UserExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.springboot.tutorial.demo01.entity.UserExample" >
     select
     <if test="distinct" >
       distinct
@@ -81,13 +81,13 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.springboot.demo01.entity.UserExample" >
+  <delete id="deleteByExample" parameterType="com.springboot.tutorial.demo01.entity.UserExample" >
     delete from user
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insertSelective" parameterType="com.springboot.demo01.entity.User" >
+  <insert id="insertSelective" parameterType="com.springboot.tutorial.demo01.entity.User" >
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -112,7 +112,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.springboot.demo01.entity.UserExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.springboot.tutorial.demo01.entity.UserExample" resultType="java.lang.Integer" >
     select count(*) from user
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -144,7 +144,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.springboot.demo01.entity.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.springboot.tutorial.demo01.entity.User" >
     update user
     <set >
       <if test="name != null" >

@@ -28,8 +28,8 @@
             <property name="forceBigDecimals" value="true"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.springboot.demo01.entity" targetProject="src/main/java">
-            <property name="rootClass" value="com.springboot.demo01.entity.BaseEntity"/>
+        <javaModelGenerator targetPackage="com.springboot.tutorial.demo01.entity" targetProject="src/main/java">
+            <property name="rootClass" value="com.springboot.tutorial.demo01.entity.BaseEntity"/>
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -53,7 +53,7 @@
                     GENERIC-SI - 将生成DAO接口以及其实现类,并在实现类的setter方法中注入SqlMapClient实例
                     SPRING - 使用Spring DAO的形式
         -->
-        <javaClientGenerator type="MIXEDMAPPER" targetPackage="com.springboot.demo01.mapper" targetProject="src/main/java">
+        <javaClientGenerator type="MIXEDMAPPER" targetPackage="com.springboot.tutorial.demo01.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 

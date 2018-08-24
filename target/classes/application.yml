@@ -1,0 +1,52 @@
+logging:
+    level:
+        com:
+            springboot:
+                tutorial:
+                    demo01:
+                        controller: info
+                        mapper: debug
+management:
+    security:
+        enabled: false
+mybatis:
+    mapper-locations: classpath*:mapper/*Mapper.xml
+    type-aliases-package: com.springboot.demo01.entity
+server:
+    port: 8080
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: 123456
+        url: jdbc:mysql://192.168.188.135:3306/springbootdb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+        username: root
+    jpa:
+        database: MYSQL
+        hibernate:
+            ddl-auto: update
+            naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5Dialect
+        show-sql: true
+    resources:
+        chain:
+            strategy:
+                content:
+                    enabled: true
+                    paths: /**
+                fixed:
+                    enabled: true
+                    paths: /js/**,/v1.0.0/**
+                    version: v1.0.1
+    thymeleaf:
+        cache: false
+        check-template-location: true
+        content-type: text/html
+        encoding: UTF-8
+        mode: HTML5
+        prefix: classpath:/templates/
+        suffix: .html
+hello:
+  msg: what's your name?
+  show: false
