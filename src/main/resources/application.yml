@@ -6,6 +6,7 @@ logging:
                     demo01:
                         controller: info
                         mapper: debug
+#监控认证关闭
 management:
     security:
         enabled: false
@@ -33,18 +34,23 @@ spring:
         chain:
             strategy:
                 content:
+#                md5方式管理静态资源（针对某个文件）不被浏览器缓存方案
                     enabled: true
                     paths: /**
                 fixed:
+#                统一资源版本号管理（所有静态资源文件）不被浏览器缓存
                     enabled: true
                     paths: /js/**,/v1.0.0/**
                     version: v1.0.1
     thymeleaf:
+#    这个开发配置为false，避免改了模板还要重启服务器
         cache: false
+#        这个可以不配置，检查模板位置
         check-template-location: true
         content-type: text/html
         encoding: UTF-8
         mode: HTML5
+#        这个是配置模板路径的，默认就是templates，可不用配置
         prefix: classpath:/templates/
         suffix: .html
 hello:
