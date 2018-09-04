@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.6.RELEASE</version>
+		<version>2.0.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -29,6 +29,11 @@
 			<groupId>com.springboot.autoconfigure.demo</groupId>
 			<artifactId>autoconfigure-hello</artifactId>
 			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<!--rabbitmq依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -78,7 +83,12 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator</artifactId>
 		</dependency>
-	
+		<!--fastjson依赖-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.49</version>
+		</dependency>
 		<!--<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper</artifactId>
